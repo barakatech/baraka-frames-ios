@@ -6,7 +6,7 @@ let package = Package(
     defaultLocalization: "en",
     platforms: [
         .macOS(.v10_12),
-        .iOS(.v12)
+        .iOS(.v13)
     ],
     products: [
         .library(
@@ -20,7 +20,7 @@ let package = Package(
             .upToNextMajor(from: Version("4.0.2"))),
         .package(
             url: "https://github.com/checkout/checkout-risk-sdk-ios.git",
-            exact: "3.0.3"),
+            .upToNextMajor(from: Version("4.0.0"))),
         .package(
             url: "https://github.com/checkout/checkout-event-logger-ios-framework.git",
             from: "1.2.4"
