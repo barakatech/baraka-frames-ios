@@ -62,7 +62,7 @@ extension Card {
       }
     }
 
-    var fullCardNumberRegex: NSRegularExpression? {
+    public var fullCardNumberRegex: NSRegularExpression? {
       switch self {
       case .unknown:
         return nil
@@ -118,7 +118,7 @@ extension Card {
       }
     }
 
-    var cvvLengths: [Int] {
+    public var cvvLengths: [Int] {
       switch self {
       case .unknown:
         return Constants.validCVVLengthsUnknownScheme
