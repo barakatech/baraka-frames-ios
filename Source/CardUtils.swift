@@ -66,7 +66,7 @@ public enum CardUtils {
     ///
     ///
     /// - returns: true if the card number is valid, false otherwise
-    public func isValid(cardNumber: String) -> Bool {
+    public static func isValid(cardNumber: String) -> Bool {
         return luhnCheck(cardNumber: cardNumber)
     }
 
@@ -78,7 +78,7 @@ public enum CardUtils {
     ///
     ///
     /// - returns: true if the cvv is valid, false otherwise
-    public func isValid(cvv: String, cardType: Card.Scheme) -> Bool {
+    public static func isValid(cvv: String, cardType: Card.Scheme) -> Bool {
         return cardType.cvvLengths.contains { $0 == cvv.count }
     }
     
@@ -89,7 +89,7 @@ public enum CardUtils {
     ///
     ///
     /// - returns: The card type corresponding to the card number, nil if no card type is found
-    public func getTypeOf(cardNumber: String) -> Card.Scheme? {
+    public static func getTypeOf(cardNumber: String) -> Card.Scheme? {
         for type in Card.Scheme.allCases {
             guard let regex = type.fullCardNumberRegex else { continue }
             let range = NSRange(location: 0, length: cardNumber.utf16.count)
@@ -100,7 +100,7 @@ public enum CardUtils {
         return nil
     }
     
-    func luhnCheck(cardNumber: String) -> Bool {
+    static func luhnCheck(cardNumber: String) -> Bool {
         var sum = 0
         let digitStrings = cardNumber.reversed().map(String.init)
         
