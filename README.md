@@ -17,7 +17,7 @@ Code changes:
 # Integration Flow
 1. Add SPM dependency: 
 ``` 
-https://github.com/batuhangobekli/frames-ios.git
+https://github.com/barakatech/baraka-frames-ios.git
 ```
 
 ## For more infos please refer to source [documentation](https://github.com/checkout/frames-ios)
