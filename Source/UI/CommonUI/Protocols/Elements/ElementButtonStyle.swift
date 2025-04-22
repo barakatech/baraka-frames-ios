@@ -52,11 +52,11 @@ public extension ElementButtonStyle {
     }
 
     var borderStyle: ElementBorderStyle {
-        DefaultBorderStyle(cornerRadius: cornerRadius,
-                           borderWidth: borderWidth,
-                           normalColor: normalBorderColor,
-                           focusColor: focusBorderColor,
-                           errorColor: errorBorderColor,
+        DefaultBorderStyle(cornerRadius: borderStyle.cornerRadius,
+                           borderWidth: borderStyle.borderWidth,
+                           normalColor: borderStyle.normalColor,
+                           focusColor: borderStyle.focusColor,
+                           errorColor: borderStyle.errorColor,
                            edges: .all,
                            corners: .allCorners)
     }

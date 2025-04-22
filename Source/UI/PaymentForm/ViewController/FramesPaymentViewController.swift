@@ -335,7 +335,7 @@ extension FramesPaymentViewController {
     var paymentViews: [UIView] = [
       headerView
     ]
-    if let cardholderStyle = viewModel.paymentFormStyle?.cardholderInput {
+    if (viewModel.paymentFormStyle?.cardholderInput) != nil {
       paymentViews.append(cardholderView)
     }
     paymentViews.append(contentsOf: [cardNumberView, expiryDateView])

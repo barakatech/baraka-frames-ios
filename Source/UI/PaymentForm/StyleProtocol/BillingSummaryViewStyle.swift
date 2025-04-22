@@ -31,9 +31,9 @@ public extension BillingSummaryViewStyle {
 
     var borderStyle: ElementBorderStyle {
         // Deprecated warning required to encourage migrating away from using these properties
-        DefaultBorderStyle(cornerRadius: cornerRadius,
-                           borderWidth: borderWidth,
-                           normalColor: borderColor,
+        DefaultBorderStyle(cornerRadius: borderStyle.cornerRadius,
+                           borderWidth: borderStyle.borderWidth,
+                           normalColor: borderStyle.normalColor,
                            focusColor: .clear,
                            errorColor: .clear,
                            edges: .all,
