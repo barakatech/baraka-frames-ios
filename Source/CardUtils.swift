@@ -34,7 +34,7 @@ public enum CardUtils {
     ///
     ///
     /// - returns: Expiry month and expiry year (month: 05, year: 21)
-    public func standardize(expirationDate: String) -> (month: String, year: String) {
+    public static func standardize(expirationDate: String) -> (month: String, year: String) {
         let digitOnlyDate = expirationDate.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
         switch digitOnlyDate.count {
         case ..<1:
